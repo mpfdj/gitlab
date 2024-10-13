@@ -1,0 +1,30 @@
+---
+version: '3.6'
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    # image: gitlab/gitlab-ce:17.4.1-ce.0
+    container_name: gitlab
+    restart: always
+    hostname: 'gitlab.example.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        # Add any other gitlab.rb configuration here, each on its own line
+        external_url 'http://gitlab.example.com'
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - 'C:/Users/TO11RC/OneDrive - ING/miel/gitlab/config:/etc/gitlab'
+      - 'C:/Users/TO11RC/OneDrive - ING/miel/gitlab/logs:/var/log/gitlab'
+      - 'C:/Users/TO11RC/OneDrive - ING/miel/gitlab/data:/var/opt/gitlab'
+    shm_size: '256m'
+    deploy:
+      resources:
+        limits:
+          cpus: '5.0'
+          memory: 16384M
+        reservations:
+          cpus: '4.0'
+          memory: 8192M
