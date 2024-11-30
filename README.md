@@ -1,3 +1,10 @@
+# An example on rebasing
+https://github.com/Omerr/rebase_playground
+main
+john_branch
+paul_branch
+
+
 https://docs.gitlab.com/ee/install/docker/installation.html
 
 
@@ -60,3 +67,8 @@ git clone git@localhost:root/hellogitlab.git
 
 # Add ssh public key to Gitlab
 > Edit profile > SSH Keys > Add new key
+
+
+
+# How to specify Memory & CPU limit in docker compose version 3
+https://stackoverflow.com/questions/42345235/how-to-specify-memory-cpu-limit-in-docker-compose-version-3
