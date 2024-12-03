@@ -16,6 +16,19 @@ Gitlab url: http://localhost:80
 username: root
 password: cat /etc/gitlab/initial_root_password
 
+OR
+
+gitlab-rake "gitlab:password:reset[root]"
+
+https://ruby.github.io/rake/
+
+
+
+# Set git username and password for local repository
+# Check Windows credential manager first
+git config --local user.name root
+git config --local user.password B*******01
+
 
 # Clone a repo
 git clone http://localhost/root/helloworld.git
